@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0",
     "element-ui": "^2.3.2",
@@ -21,7 +22,6 @@
     "autod-egg": "^1.0.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",

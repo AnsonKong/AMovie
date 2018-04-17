@@ -20,7 +20,7 @@ module.exports = {
 			},
 			{
 				test: /\.vue$/,
-				use: [ 'vue-loader' ],
+				use: [ 'vue-loader' ]
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/,

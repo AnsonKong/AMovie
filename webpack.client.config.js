@@ -18,10 +18,10 @@ module.exports = merge(baseConfig, {
   		name: false,
       cacheGroups: {
         vue: {
-          test: /[\\/]vue[\\/]/,
+          test: /[\\/]vue[\\/]/
         },
         'element-ui': {
-          test: /[\\/]element-ui[\\/]/,
+          test: /[\\/]element-ui[\\/]/
         }
       }
   	}

@@ -6,6 +6,7 @@ import createElement from './element'
 import { sync } from 'vuex-router-sync'
 import VueJsonp from 'vue-jsonp'
 import LoadManager from './utils/LoadManager'
+import 'babel-polyfill'
 
 export default () => {
 	const router = createRouter()

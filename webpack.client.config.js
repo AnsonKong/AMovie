@@ -4,11 +4,7 @@ const baseConfig = require('./webpack.base.config.js');
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
 
 module.exports = merge(baseConfig, {
-  entry: {
-  	vue: 'vue',
-    element: './app/web/page/element/index.js',
-  	main: './app/web/page/entry-client.js',
-  },
+  entry: './app/web/page/entry-client.js',
   output: {
     filename: '[name].[chunkhash].js',
     path: WebpackConst.clientOutputPath
@@ -19,7 +15,16 @@ module.exports = merge(baseConfig, {
   optimization: {
   	splitChunks: {
   		chunks: 'all',
-  		name: false
-  	}
+  		name: false,
+      cacheGroups: {
+        vue: {
+          test: /[\\/]vue[\\/]/,
+        },
+        'element-ui': {
+          test: /[\\/]element-ui[\\/]/,
+        }
+      }
+  	},
+    runtimeChunk: true
   }
 })

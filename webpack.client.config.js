@@ -24,7 +24,6 @@ module.exports = merge(baseConfig, {
           test: /[\\/]element-ui[\\/]/,
         }
       }
-  	},
-    runtimeChunk: true
+  	}
   }
 })

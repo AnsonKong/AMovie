@@ -13,3 +13,12 @@ $ npm run dev
 $ npm start
 $ npm stop
 ```
+
+### 截图预览
+#### Mobile:
+
+![Mobile Screenshot](./screenshots/mobile.jpg?raw=true "Mobile Screenshot")
+
+#### Destop:
+
+![Destop Screenshot](./screenshots/destop.jpg?raw=true "Destop Screenshot")

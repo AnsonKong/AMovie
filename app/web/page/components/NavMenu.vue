@@ -8,7 +8,6 @@
 		  <el-menu-item index="/top250">Top250</el-menu-item>
 		  <el-menu-item index="/us_box">北美票房榜</el-menu-item>
 
-
 			<el-menu-item class="menu-item-right" index="/about">关于</el-menu-item>
 			<el-menu-item class="menu-item-right" index="/search">搜索</el-menu-item>
 	</el-menu>

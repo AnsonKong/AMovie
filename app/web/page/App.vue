@@ -1,12 +1,10 @@
 <template>
-	<el-container v-loading.body.fullscreen.lock="loading">
-		<el-header>
-			<NavMenu/>
-		</el-header>
-		<el-main>
+	<div v-loading.body.fullscreen.lock="loading">
+		<NavMenu/>
+		<div id="main">
 			<router-view/>
-		</el-main>
-	</el-container>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -37,30 +35,36 @@ a {
 	color: #409EFF
 }
 ul {
-	list-style: none;
-}
-ol {
+	padding: 0;
 	list-style: none;
 }
 li {
 	line-height: 1.5rem;
 }
+
+.responsive-poster {
+  width: 117px;
+	height: 171px;
+}
+@media (min-width: 992px) {
+  .responsive-poster {
+    width: 270px;
+		height: 403px;
+  }
+}
 </style>
 
 <style lang="stylus" scoped>
-.el-header
-	padding 0
+#main
+	padding 20px
 </style>
 
 <style src="element-ui/lib/theme-chalk/menu.css"></style>
 <style src="element-ui/lib/theme-chalk/menu-item.css"></style>
 <style src="element-ui/lib/theme-chalk/button.css"></style>
-<style src="element-ui/lib/theme-chalk/container.css"></style>
-<style src="element-ui/lib/theme-chalk/header.css"></style>
 <style src="element-ui/lib/theme-chalk/icon.css"></style>
 <style src="element-ui/lib/theme-chalk/input.css"></style>
 <style src="element-ui/lib/theme-chalk/loading.css"></style>
-<style src="element-ui/lib/theme-chalk/main.css"></style>
 <style src="element-ui/lib/theme-chalk/message.css"></style>
 <style src="element-ui/lib/theme-chalk/pagination.css"></style>
 <style src="element-ui/lib/theme-chalk/rate.css"></style>

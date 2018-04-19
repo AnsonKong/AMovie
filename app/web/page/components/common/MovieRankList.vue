@@ -3,9 +3,9 @@
 		<h1>
 			{{ src.date }} {{ src.title }}
 		</h1>
-		<ol>
+		<ul>
 			<MovieRankItem class="rank-item" v-for="item in src.subjects" :key="item.id" :src="item"/>
-		</ol>
+		</ul>
 	</div>
 </template>
 

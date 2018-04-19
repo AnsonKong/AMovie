@@ -1,7 +1,8 @@
 <template>
 	<li>
 		<router-link :to="{ path: `subject/${this.src.id}` }" :title="parsedTitle">
-			<img :src="src.images.small" :width="imgWidth" :height="imgHeight" :alt="src.title"/>
+			<img class="responsive-poster" :src="src.images.small" :alt="src.title"/>
+			<br>
 			<span :alt="parsedTitle">{{ parsedTitle }}</span>
 			<el-rate
 			  :value="parsedRate"
@@ -21,14 +22,6 @@ export default {
 			type: Object,
 			default: null
 		},
-		imgWidth: {
-			type: String,
-			default: '270px'
-		},
-		imgHeight: {
-			type: String,
-			default: '403px'
-		}
 	},
 	computed: {
 		parsedRate () {
@@ -46,16 +39,20 @@ export default {
 <style lang="stylus" scoped>
 li
 	text-align center
-	margin 20px
-	display inline-block
+	display block
+	margin 20px 0
+
+@media (min-width: 992px)
+	li
+		display inline-block
+		margin 20px
+
 a
 	color black
-img
-	display block
 span
-	margin 10px 0
-	display block
-	width 270px
+	margin 5px 0
+	display inline-block
+	max-width 270px
 	white-space nowrap
 	overflow hidden
 	text-overflow ellipsis

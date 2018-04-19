@@ -22,7 +22,7 @@ export default {
 	data: function () {
 		return {
 			src: {},
-			pageSize: 20
+			pageSize: 10
 		}
 	},
 	computed: {
@@ -41,7 +41,8 @@ export default {
 		loadPage () {
 			window.scrollTo(0, 0)
 			this.$jsonpHelper(this.api, {
-				start: (this.currentPage - 1) * this.pageSize
+				start: (this.currentPage - 1) * this.pageSize,
+				count: this.pageSize
 			}, (err, json) => {
 				if (!err) this.src = json
 			})

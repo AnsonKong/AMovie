@@ -1,11 +1,13 @@
 <template>
 	<div>
-		<el-input
-		  placeholder="请输入关键字"
-		  v-model="keyword"
-		  clearable>
-		</el-input>
-		<el-button type="primary" icon="el-icon-search" :loading="searching" @click="onSearch">搜索</el-button>
+		<div id="input-container">
+			<el-input
+			  placeholder="请输入关键字"
+			  v-model="keyword"
+			  clearable>
+			</el-input>
+			<el-button type="primary" icon="el-icon-search" :loading="searching" @click="onSearch">搜索</el-button>
+		</div>
 		<template v-if="src">
 			<h1>
 				{{ src.title }}，共有 {{ src.total }} 条结果
@@ -99,8 +101,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+#input-container
+	text-align center
 .el-input
-	max-width 300px
+	display block
+	margin-bottom 10px
+@media (min-width: 992px)
+	.el-input
+		width 300px
+		display inline-block
+		margin-bottom 0
+	#input-container
+		text-align left
 ul
 	padding 0
 </style>

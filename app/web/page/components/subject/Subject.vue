@@ -15,7 +15,7 @@
 				<small>{{ src.ratings_count }}人评价</small>
 			</p>
 			<p>
-				<img class="info-pic" :src="src.images ? src.images.large : ''"/>
+				<img class="responsive-poster" :src="src.images ? src.images.large : ''"/>
 			</p>
 		</div>
 		<ul class="info-list">
@@ -86,8 +86,11 @@ export default {
 .year
 	color #888
 .main
-	width 60%
+	width 100%
 	margin 0 auto
+@media (min-width: 992px)
+	.main
+		width 60%
 .center
 	text-align center
 .summary

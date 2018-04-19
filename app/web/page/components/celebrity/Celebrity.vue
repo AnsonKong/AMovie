@@ -16,9 +16,9 @@
 		<h3>
 			最受好评的5部作品
 		</h3>
-		<ol class="list-rank">
+		<ul class="list-rank">
 			<MovieRankItem class="rank-item" v-for="item in src.works" :key="item.id" :src="item"/>
-		</ol>
+		</ul>
 	</div>
 </template>
 

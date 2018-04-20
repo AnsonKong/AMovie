@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = appInfo => {
   const config = exports = {};
 
@@ -7,11 +6,11 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1522162387042_3633';
 
   // add your config here
-  config.middleware = ['notfoundHandler'];
+  config.middleware = [ 'notfoundHandler' ];
 
   config.development = {
-  	ignoreDirs: ['app/web']
+    ignoreDirs: [ 'app/web' ],
   };
-  
+
   return config;
 };

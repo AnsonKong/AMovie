@@ -1,3 +1,4 @@
+'use strict';
 const merge = require('webpack-merge');
 const WebpackConst = require('./lib/WebpackConst');
 const baseConfig = require('./webpack.base.config.js');
@@ -7,23 +8,23 @@ module.exports = merge(baseConfig, {
   entry: './app/web/page/entry-client.js',
   output: {
     filename: '[name].[chunkhash].js',
-    path: WebpackConst.clientOutputPath
+    path: WebpackConst.clientOutputPath,
   },
   plugins: [
-    new VueSSRClientPlugin()
+    new VueSSRClientPlugin(),
   ],
   optimization: {
-  	splitChunks: {
-  		chunks: 'all',
-  		name: false,
+    splitChunks: {
+      chunks: 'all',
+      name: false,
       cacheGroups: {
         vue: {
-          test: /[\\/]vue[\\/]/
+          test: /[\\/]vue[\\/]/,
         },
         'element-ui': {
-          test: /[\\/]element-ui[\\/]/
-        }
-      }
-  	}
-  }
-})
+          test: /[\\/]element-ui[\\/]/,
+        },
+      },
+    },
+  },
+});

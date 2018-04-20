@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  rules: {
+    "linebreak-style": "off",
+    "semi": "off",
+    "space-before-function-paren": "off",
+    "comma-dangle": "off"
+  }
+}

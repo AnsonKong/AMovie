@@ -11,17 +11,17 @@ import Message from 'element-ui/lib/message'
 import Tag from 'element-ui/lib/tag'
 
 export default () => {
-	Vue.use(Pagination)
-	Vue.use(Menu)
-	Vue.use(MenuItem)
-	Vue.use(Input)
-	Vue.use(Button)
-	Vue.use(Icon)
-	Vue.use(Rate)
-	Vue.use(Tag)
+  Vue.use(Pagination)
+  Vue.use(Menu)
+  Vue.use(MenuItem)
+  Vue.use(Input)
+  Vue.use(Button)
+  Vue.use(Icon)
+  Vue.use(Rate)
+  Vue.use(Tag)
 
-	Vue.use(Loading.directive);
+  Vue.use(Loading.directive);
 
-	Vue.prototype.$loading = Loading.service;
-	Vue.prototype.$message = Message;
+  Vue.prototype.$loading = Loading.service;
+  Vue.prototype.$message = Message;
 }

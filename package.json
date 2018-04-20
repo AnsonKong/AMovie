@@ -1,7 +1,7 @@
 {
   "name": "AMovie",
   "version": "1.0.0",
-  "description": "",
+  "description": "Movie Website developed with VueSSR + ElementUI + Egg.js",
   "private": true,
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -21,6 +21,7 @@
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "cross-env": "^5.1.4",
@@ -63,8 +64,9 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/AnsonKong/AMovie"
   },
-  "author": "",
+  "homepage": "https://movie.anodejsfun.top/",
+  "author": "AnsonKong <kongweian@163.com>",
   "license": "MIT"
 }

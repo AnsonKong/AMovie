@@ -1,3 +1,4 @@
+'use strict';
 module.exports = (options, app) => {
   return async (ctx, next) => {
     await next();
@@ -5,12 +6,12 @@ module.exports = (options, app) => {
       const currentEnv = app.config.env;
       let msg;
       switch (currentEnv) {
-        case 'local':
+        case 'local': {
           const path = require('path');
           const mime = require('mime');
           const GlobalReg = require('../../lib/GlobalReg');
           try {
-            let filePath = ctx.request.path;
+            const filePath = ctx.request.path;
             // Object(it's Buffer actually) or String encoded by 'utf-8'
             let fileData = await app.memoryFileWorker.requestClientFile(filePath);
             // get extension
@@ -22,13 +23,14 @@ module.exports = (options, app) => {
               fileData = Buffer.from(fileData);
             }
             msg = fileData;
-          } catch(err) {
+          } catch (err) {
             msg = err;
           }
-      		break;
-      	default:
-      		msg = 'sorry, resource not found...';
-      		break;
+        }
+          break;
+        default:
+          msg = 'sorry, resource not found...';
+          break;
       }
       ctx.body = msg;
     }

@@ -8,7 +8,7 @@ if (window.__INITIAL_STATE__) {
 }
 
 router.onReady(() => {
-	// if 'client-data-pre-fetching' is needed
+  // if 'client-data-pre-fetching' is needed
   // use `router.befoeResolve((to, from, next) => { ... })`
   // use Promise & remember to run `next()`
   app.$mount('#app')
